@@ -1,0 +1,4 @@
+MONGO_URI="your_mongodb_connection_string"  # Replace with your actual MongoDB connection string
+JWT_SECRET_KEY="your_jwt_secret_key"      # Replace with a strong, randomly generated secret key
+GOOGLE_CLIENT_ID="your_google_client_id"  # Your Google OAuth client ID
+GOOGLE_CLIENT_SECRET="your_google_client_secret" # Your Google OAuth client secret
