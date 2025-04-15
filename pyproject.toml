@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-flask"
+name = "Trendify"
 version = "0.1.0"
 description = "Start a simple web app with the Flask framework for Python"
 authors = ["Google LLC"]
