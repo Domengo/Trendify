@@ -8,4 +8,5 @@ if ! grep -q "$PATH" /home/user/.bashrc; then
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/user/.bashrc
 fi
 
+export FLASK_APP=src
 flask run

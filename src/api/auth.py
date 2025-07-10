@@ -8,20 +8,20 @@ auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 def register_user():
     data = request.get_json()
     if not data or not all(
-                            key in data for key in
-                            ("username", "password", "role")
-                            ):
+        key in data for key in
+        ("username", "password", "role")
+    ):
         return jsonify({"message": "Missing required fields"}), 400
-    try:        
+    try:
         return register(data["username"], data["password"], data["role"])
-    except ValueError as e:        
+    except ValueError as e:
         return jsonify({"message": str(e)}), 400
 
 
 @auth_bp.route("/login", methods=["POST"])
 def login_user():
-    data = request.get_json()    
-    if not data or not all(key in data for key in ("username", "password")):        
+    data = request.get_json()
+    if not data or not all(key in data for key in ("username", "password")):
         return jsonify({"message": "Missing username or password"}), 400
     try:
         token = login(data["username"], data["password"])
